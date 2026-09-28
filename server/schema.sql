@@ -117,3 +117,11 @@ WHERE u.email = 'organizer@demo.com'
     SELECT 1 FROM events existing
     WHERE existing.organizer_id = u.id AND existing.name = seed.name
   );
+
+UPDATE events e
+SET image = 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1200&q=80'
+FROM users u
+WHERE e.organizer_id = u.id
+  AND u.email = 'organizer@demo.com'
+  AND e.name = 'Pottery & Chai Studio'
+  AND e.image = 'https://images.unsplash.com/photo-1565193298595-6c6b197a4b7a';

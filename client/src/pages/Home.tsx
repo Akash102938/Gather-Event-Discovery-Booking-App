@@ -6,6 +6,7 @@ import EventCard from '../components/EventCard';
 import CategoryCard from '../components/CategoryCard';
 import LoadingIndicator from '../components/LoadingIndicator';
 import EmptyState from '../components/EmptyState';
+import EventImage from '../components/EventImage';
 import { CATEGORIES } from '../types';
 
 export default function Home() {
@@ -55,7 +56,7 @@ export default function Home() {
 
         <div className="relative min-h-[280px] overflow-hidden rounded-[28px] bg-teal shadow-[0_24px_70px_rgba(47,93,98,0.22)] sm:min-h-[360px]">
           {heroEvent?.image && (
-            <img src={heroEvent.image} alt="" className="absolute inset-0 h-full w-full object-cover opacity-80" />
+            <EventImage src={heroEvent.image} alt="" loading="eager" className="absolute inset-0 h-full w-full object-cover opacity-80" />
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-[#101f20]/90 via-[#101f20]/10 to-[#101f20]/10" />
           <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-xs font-semibold text-ink shadow-sm backdrop-blur sm:left-7 sm:top-7">

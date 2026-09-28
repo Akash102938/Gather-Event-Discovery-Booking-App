@@ -132,6 +132,9 @@ The sample accounts are created by `server/schema.sql`.
 | Attendee | `user@demo.com` | `Password123` |
 | Organizer | `organizer@demo.com` | `Password123` |
 
+
+
+
 Use the organizer account to open **Profile → Organizer dashboard**.
 
 ## API overview

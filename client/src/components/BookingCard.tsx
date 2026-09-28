@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Booking } from '../types';
+import EventImage from './EventImage';
 
 const STATUS_STYLES: Record<string, string> = {
   upcoming: 'bg-teal/10 text-teal',
@@ -11,7 +12,7 @@ export default function BookingCard({ booking, onCancel }: { booking: Booking; o
   return (
     <div className="flex flex-col gap-3 rounded-card border border-ink/10 bg-white p-4 sm:flex-row sm:items-center">
       <div className="h-16 w-16 shrink-0 overflow-hidden rounded-card bg-sand">
-        {booking.image && <img src={booking.image} alt="" className="h-full w-full object-cover" />}
+        <EventImage src={booking.image} alt="" className="h-full w-full object-cover" />
       </div>
       <div className="flex-1">
         <div className="flex items-center gap-2">

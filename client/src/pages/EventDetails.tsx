@@ -6,6 +6,7 @@ import { useFavoriteStore } from '../store/favoriteStore';
 import LoadingIndicator from '../components/LoadingIndicator';
 import PrimaryButton from '../components/PrimaryButton';
 import EmptyState from '../components/EmptyState';
+import EventImage from '../components/EventImage';
 
 export default function EventDetails() {
   const { id } = useParams();
@@ -38,7 +39,7 @@ export default function EventDetails() {
   return (
     <div className="flex flex-col gap-5 pb-4">
       <div className="h-56 w-full overflow-hidden rounded-card bg-sand">
-        {event.image && <img src={event.image} alt={event.name} className="h-full w-full object-cover" />}
+        <EventImage src={event.image} alt={event.name} className="h-full w-full object-cover" />
       </div>
 
       <div>

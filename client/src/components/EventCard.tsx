@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { EventItem } from '../types';
 import { useAuthStore } from '../store/authStore';
 import { useFavoriteStore } from '../store/favoriteStore';
+import EventImage from './EventImage';
 
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
@@ -20,10 +21,9 @@ export default function EventCard({ event }: { event: EventItem }) {
     >
       <div className="relative h-48 w-full overflow-hidden bg-sand sm:h-52">
         {event.image ? (
-          <img
+          <EventImage
             src={event.image}
             alt={event.name}
-            loading="lazy"
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         ) : (
