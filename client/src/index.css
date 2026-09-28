@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#f7f7f4] text-ink font-sans antialiased;
+  font-feature-settings: "ss01" on;
+}
+
+::selection {
+  @apply bg-gold/40;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input, textarea, select {
+  color-scheme: light;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid theme('colors.teal');
+  outline-offset: 3px;
+}
